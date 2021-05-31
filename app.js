@@ -1,4 +1,5 @@
 // var http=require('http');
+//var url = require('url');
 // const { type } = require('os');
 // var server=http.createServer(function(req,res){
   
@@ -21,8 +22,7 @@
 //          res.end();
 //       }
 // });
-// var http = require('http');
-// var url = require('url');
+
 
 // http.createServer(function (req, res) {
 //   res.writeHead(200, {'Content-Type': 'text/html'});
@@ -35,4 +35,3 @@
 
 // server.listen(8080);
 // console.log("Server Run Succesfully");
-console.log(123)
