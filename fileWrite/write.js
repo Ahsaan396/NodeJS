@@ -4,16 +4,16 @@ var server=http.createServer(function(req,res){
   
     if(req.url=="/")
     {
-        fs.writeFile('demo.txt',"hello  world",function(error){
+        fs.writeFile('demo.txt','update.txt',function(error){
              if(error){
             res.writeHead(200,{'Content-Type':'text/html'})
-            res.write("File write fail");
+            res.write("File rename fail");
             res.end();
     }
     else
     {
         res.writeHead(200,{'Content-Type':'text/html'})
-        res.write("File write successfully");
+        res.write("File rename successfully");
         res.end(); 
     }
         });
@@ -23,4 +23,4 @@ var server=http.createServer(function(req,res){
  });
 server.listen(5050);
 console.log("Server run successfully");
-// this is for writeFile... 
+// okay when you run it in browser then 1stly u see "File rename successfully" then again u refresh it an see "File rename fail" bcz after hitting 1st time it .txt will update and second time it will not match.. Happy coding:)
