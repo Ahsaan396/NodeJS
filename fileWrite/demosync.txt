@@ -1,1 +1,1 @@
-Welcome to sync fileWrite
+demosyncNew.txt
