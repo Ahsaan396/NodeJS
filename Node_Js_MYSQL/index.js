@@ -16,14 +16,15 @@ con.connect(function(error)
     else
     {
         console.log("connection success");
-        InsertData(con);
+       // InsertData(con);
+       DeleteData(con);
     }
 
 });
 
 function InsertData(con)
 {
-    let SQLQuery="INSERT INTO `students_list` (`Name`,`City`, `Phone`, `Class`) VALUES ('Ahsan','Sylhet','01719374786','13')";
+    let SQLQuery="INSERT INTO `students_list` (`Name`,`City`, `Phone`, `Class`) VALUES ('Imam','Sylhet','01719374790','11')";
 
     con.query(SQLQuery,function(error)
     {
@@ -37,4 +38,19 @@ function InsertData(con)
         }
 
     })
+}
+
+function DeleteData(con)
+{
+    let SQLQuery="DELETE FROM `students_list` WHERE `ID`='2'";
+    con.query(SQLQuery,function(error){
+        if(error)
+        {
+            console.log("Data delete fail");
+        }
+        else {
+            console.log("Data delete success");
+        }
+    })
+
 }
